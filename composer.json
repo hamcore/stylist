@@ -1,15 +1,11 @@
 {
   "name": "hamcore/stylist",
-  "description": "Laravel 5 theming package.",
+  "description": "Laravel 5 theming package based on FloatingPoint-Stylist",
   "authors": [
     {
-      "name": "Kirk Bushell",
-      "email": "torm3nt@gmail.com"
+      "name": "Mark Gregory",
+      "email": "g4lch£gmx.com"
     },
-    {
-      "name": "Mike Dugan",
-      "email": "mike@mjdugan.com"
-    }
   ],
   "require": {
     "php": "^7.1",
