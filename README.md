@@ -3,17 +3,17 @@
 
 [![Build Status](https://img.shields.io/travis/floatingpointsoftware/stylist.svg?branch=master)](https://travis-ci.org/floatingpointsoftware/stylist)
 
-Stylist is a Laravel 5.5+ compatible package for theming your Laravel applications.
+Stylist is a Laravel 5.5+ compatible package for theming your Laravel applications based upon FloatingPoint\Stylist package.
 
 ## Installation
 
 Via the usual composer command:
 
-    composer require floatingpoint/stylist
+    composer require hamcore/stylist
 
 Then, make sure the Stylist service provider is made available to your application by updating your config/app.php:
 
-    'FloatingPoint\Stylist\StylistServiceProvider',
+    'HamCore\Stylist\StylistServiceProvider',
 
 You're now ready to go!
 
