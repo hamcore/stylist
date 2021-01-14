@@ -1,11 +1,11 @@
 <?php
-namespace FloatingPoint\Stylist;
+namespace HamCore\Stylist;
 
 use Cache;
 use Config;
-use FloatingPoint\Stylist\Html\ThemeHtmlBuilder;
-use FloatingPoint\Stylist\Theme\Loader;
-use FloatingPoint\Stylist\Theme\Stylist;
+use HamCore\Stylist\Html\ThemeHtmlBuilder;
+use HamCore\Stylist\Theme\Loader;
+use HamCore\Stylist\Theme\Stylist;
 use Illuminate\Support\AggregateServiceProvider;
 use Illuminate\Foundation\AliasLoader;
 

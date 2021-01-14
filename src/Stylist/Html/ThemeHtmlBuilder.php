@@ -1,8 +1,8 @@
 <?php
-namespace FloatingPoint\Stylist\Html;
+namespace HamCore\Stylist\Html;
 
 use Collective\Html\HtmlBuilder;
-use FloatingPoint\Stylist\Facades\StylistFacade;
+use HamCore\Stylist\Facades\StylistFacade;
 use Illuminate\Routing\UrlGenerator;
 
 class ThemeHtmlBuilder

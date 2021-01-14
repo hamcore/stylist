@@ -1,8 +1,8 @@
 <?php
 namespace Tests\Html;
 
-use FloatingPoint\Stylist\Facades\StylistFacade;
-use FloatingPoint\Stylist\Html\ThemeHtmlBuilder;
+use HamCore\Stylist\Facades\StylistFacade;
+use HamCore\Stylist\Html\ThemeHtmlBuilder;
 use Tests\TestCase;
 
 class ThemeHtmlBuilderTest extends TestCase

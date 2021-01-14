@@ -1,9 +1,9 @@
 <?php
 
-namespace FloatingPoint\Stylist\Theme;
+namespace HamCore\Stylist\Theme;
 
 use File;
-use FloatingPoint\Stylist\Theme\Exceptions\ThemeJsonNotFoundException;
+use HamCore\Stylist\Theme\Exceptions\ThemeJsonNotFoundException;
 
 class Json
 {

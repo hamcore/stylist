@@ -1,9 +1,9 @@
 <?php
 
-namespace FloatingPoint\Stylist\Theme;
+namespace HamCore\Stylist\Theme;
 
 use Cache;
-use FloatingPoint\Stylist\Theme\Exceptions\ThemeNotFoundException;
+use HamCore\Stylist\Theme\Exceptions\ThemeNotFoundException;
 use Illuminate\Container\Container;
 
 /**
