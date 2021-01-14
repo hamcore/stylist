@@ -1,7 +1,10 @@
 # Stylist
 ## About
 
-[![Build Status](https://img.shields.io/travis/floatingpointsoftware/stylist.svg?branch=master)](https://travis-ci.org/floatingpointsoftware/stylist)
+[![Build Status](https://travis-ci.com/hamcore/stylist.svg?branch=master)](https://travis-ci.com/hamcore/stylist)
+
+[![StyleCI](https://github.styleci.io/repos/329668210/shield?branch=master)](https://github.styleci.io/repos/329668210?branch=master)
+
 
 Stylist is a Laravel 5.5+ compatible package for theming your Laravel applications based upon FloatingPoint\Stylist package.
 
@@ -11,7 +14,7 @@ Via the usual composer command:
 
     composer require hamcore/stylist
 
-Then, make sure the Stylist service provider is made available to your application by updating your config/app.php:
+Then, make sure the Stylist service provider is made available to your application by updating your config/app.php with the following:
 
     'HamCore\Stylist\StylistServiceProvider',
 
