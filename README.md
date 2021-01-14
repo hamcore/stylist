@@ -18,6 +18,10 @@ Then, make sure the Stylist service provider is made available to your applicati
 
     'HamCore\Stylist\StylistServiceProvider',
 
+for Laravel 6 execute the following command to create the config file in /app/config as stylist.php and then adjust your based path to suite.
+
+ `php artisan vendor:publish --provider="HamCore\Stylist\StylistServiceProvider"`
+
 You're now ready to go!
 
 ## Setting up a theme
