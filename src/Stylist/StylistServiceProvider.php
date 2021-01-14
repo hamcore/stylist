@@ -1,13 +1,12 @@
 <?php
+
 namespace HamCore\Stylist;
 
-use Cache;
-use Config;
 use HamCore\Stylist\Html\ThemeHtmlBuilder;
 use HamCore\Stylist\Theme\Loader;
 use HamCore\Stylist\Theme\Stylist;
-use Illuminate\Support\AggregateServiceProvider;
 use Illuminate\Foundation\AliasLoader;
+use Illuminate\Support\AggregateServiceProvider;
 
 class StylistServiceProvider extends AggregateServiceProvider
 {
@@ -17,7 +16,7 @@ class StylistServiceProvider extends AggregateServiceProvider
      * @var array
      */
     protected $providers = [
-        'Collective\Html\HtmlServiceProvider'
+        'Collective\Html\HtmlServiceProvider',
     ];
 
     /**
@@ -68,9 +67,8 @@ class StylistServiceProvider extends AggregateServiceProvider
      */
     protected function registerStylist()
     {
-        $this->app->singleton('stylist', function($app)
-        {
-            return new Stylist(new Loader, $app);
+        $this->app->singleton('stylist', function ($app) {
+            return new Stylist(new Loader(), $app);
         });
     }
 
@@ -79,8 +77,7 @@ class StylistServiceProvider extends AggregateServiceProvider
      */
     protected function registerThemeBuilder()
     {
-        $this->app->singleton('stylist.theme', function($app)
-        {
+        $this->app->singleton('stylist.theme', function ($app) {
             return new ThemeHtmlBuilder($app['html'], $app['url']);
         });
     }
@@ -114,7 +111,7 @@ class StylistServiceProvider extends AggregateServiceProvider
     protected function registerConfiguration()
     {
         $this->publishes([
-            __DIR__ . '/../config/config.php' => config_path('stylist.php')
+            __DIR__.'/../config/config.php' => config_path('stylist.php'),
         ]);
     }
 
@@ -127,8 +124,7 @@ class StylistServiceProvider extends AggregateServiceProvider
     {
         return array_merge(parent::provides(), [
             'Stylist',
-            'Theme'
+            'Theme',
         ]);
     }
-
 }

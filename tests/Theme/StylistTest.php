@@ -1,4 +1,5 @@
 <?php
+
 namespace Tests\Theme;
 
 use HamCore\Stylist\Theme\Exceptions\ThemeNotFoundException;
@@ -10,7 +11,7 @@ class StylistTest extends \Tests\TestCase
 {
     public function testThemeRegistration()
     {
-        $stylist = new Stylist(new Loader, $this->app);
+        $stylist = new Stylist(new Loader(), $this->app);
         $theme = new Theme('n', 'd', 'path');
 
         $stylist->register($theme, true);
@@ -21,7 +22,7 @@ class StylistTest extends \Tests\TestCase
 
     public function testThemeDiscovery()
     {
-        $stylist = new Stylist(new Loader, $this->app);
+        $stylist = new Stylist(new Loader(), $this->app);
         $themes = $stylist->discover(__DIR__.'/../Stubs');
 
         $this->assertCount(3, $themes);
@@ -29,13 +30,13 @@ class StylistTest extends \Tests\TestCase
 
     public function testCacheManagement()
     {
-        $stylist = new Stylist(new Loader, $this->app);
+        $stylist = new Stylist(new Loader(), $this->app);
         $theme = new Theme('name', 'desc', 'path');
 
         $stylist->cache([$theme]);
 
         // To test cache, we setup a new stylist instance
-        $stylist = new Stylist(new Loader, $this->app);
+        $stylist = new Stylist(new Loader(), $this->app);
         $stylist->setupFromCache();
 
         $this->assertEquals($theme, $stylist->get('name'));
@@ -43,7 +44,7 @@ class StylistTest extends \Tests\TestCase
 
     public function testPathRegistration()
     {
-        $stylist = new Stylist(new Loader, $this->app);
+        $stylist = new Stylist(new Loader(), $this->app);
 
         $stylist->registerPath(__DIR__.'/../Stubs/Themes/Parent');
 
@@ -52,7 +53,7 @@ class StylistTest extends \Tests\TestCase
 
     public function testMultiplePathRegistrations()
     {
-        $stylist = new Stylist(new Loader, $this->app);
+        $stylist = new Stylist(new Loader(), $this->app);
         $paths = $stylist->discover(__DIR__.'/../Stubs');
 
         $stylist->registerPaths($paths);
@@ -71,14 +72,14 @@ class StylistTest extends \Tests\TestCase
      */
     public function testInvalidTheme()
     {
-        $this->expectException(ThemeNotFoundException::class );
-        $stylist = new Stylist(new Loader, $this->app);
+        $this->expectException(ThemeNotFoundException::class);
+        $stylist = new Stylist(new Loader(), $this->app);
         $stylist->get('invalidtheme');
     }
 
     public function testThemeViewIsOverloadable()
     {
-        $stylist = new Stylist(new Loader, $this->app);
+        $stylist = new Stylist(new Loader(), $this->app);
         $paths = $stylist->discover(__DIR__.'/../Stubs');
 
         $stylist->registerPaths($paths);

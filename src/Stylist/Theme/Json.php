@@ -51,6 +51,7 @@ class Json
      * Returns the value for a specific json attribute.
      *
      * @param string $attribute
+     *
      * @return mixed
      */
     public function getJsonAttribute($attribute)

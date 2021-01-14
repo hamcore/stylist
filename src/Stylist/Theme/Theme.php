@@ -1,17 +1,15 @@
 <?php
+
 namespace HamCore\Stylist\Theme;
 
-use File;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Str;
 
 /**
- * Class Theme
+ * Class Theme.
  *
  * Theme objects are just dumb little DTOs, used as a reference point for collecting information
  * about themes, namely their name, description and parent details.
- *
- * @package FloatingPoint\Stylist\Theme
  */
 class Theme implements Arrayable
 {
@@ -89,7 +87,7 @@ class Theme implements Arrayable
      */
     public function hasParent()
     {
-        return !!$this->parent;
+        return (bool) $this->parent;
     }
 
     /**

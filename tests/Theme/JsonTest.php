@@ -1,4 +1,5 @@
 <?php
+
 namespace Tests\Theme;
 
 use HamCore\Stylist\Theme\Exceptions\ThemeJsonNotFoundException;
@@ -13,7 +14,7 @@ class JsonTest extends \Tests\TestCase
         $this->themeJson = new Json(__DIR__.'/../Stubs/Themes/Parent');
     }
 
-	public function testJsonRetrievalForExistingTheme()
+    public function testJsonRetrievalForExistingTheme()
     {
         $json = $this->themeJson->getJson();
 
