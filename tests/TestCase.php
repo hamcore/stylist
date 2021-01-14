@@ -5,13 +5,13 @@ use Mockery as m;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {
-    public function tearDown()
+    public function tearDown() :void
     {
         parent::tearDown();
         m::close();
     }
 
-    public function setUp()
+    public function setUp() :void
     {
         parent::setUp();
 
@@ -42,7 +42,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
     protected function getApplicationAliases($app)
     {
         $aliases = parent::getApplicationAliases($app);
-        
+
         $aliases['Stylist'] = 'FloatingPoint\Stylist\Facades\StylistFacade';
 
         return $aliases;
