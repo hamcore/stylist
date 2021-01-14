@@ -1,5 +1,5 @@
 <?php
-namespace FloatingPoint\Stylist\Theme;
+namespace HamCore\Stylist\Theme;
 
 use File;
 use Illuminate\Contracts\Support\Arrayable;

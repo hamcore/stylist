@@ -1,10 +1,10 @@
 <?php
 namespace Tests\Theme;
 
-use floatingpoint\Stylist\Theme\Exceptions\ThemeNotFoundException;
-use FloatingPoint\Stylist\Theme\Loader;
-use FloatingPoint\Stylist\Theme\Stylist;
-use FloatingPoint\Stylist\Theme\Theme;
+use HamCore\Stylist\Theme\Exceptions\ThemeNotFoundException;
+use HamCore\Stylist\Theme\Loader;
+use HamCore\Stylist\Theme\Stylist;
+use HamCore\Stylist\Theme\Theme;
 
 class StylistTest extends \Tests\TestCase
 {

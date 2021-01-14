@@ -1,5 +1,5 @@
 <?php
-namespace FloatingPoint\Stylist\Theme;
+namespace HamCore\Stylist\Theme;
 
 /**
  * Class UrlGenerator

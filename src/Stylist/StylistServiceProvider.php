@@ -1,11 +1,11 @@
 <?php
-namespace FloatingPoint\Stylist;
+namespace HamCore\Stylist;
 
 use Cache;
 use Config;
-use FloatingPoint\Stylist\Html\ThemeHtmlBuilder;
-use FloatingPoint\Stylist\Theme\Loader;
-use FloatingPoint\Stylist\Theme\Stylist;
+use HamCore\Stylist\Html\ThemeHtmlBuilder;
+use HamCore\Stylist\Theme\Loader;
+use HamCore\Stylist\Theme\Stylist;
 use Illuminate\Support\AggregateServiceProvider;
 use Illuminate\Foundation\AliasLoader;
 
@@ -92,10 +92,10 @@ class StylistServiceProvider extends AggregateServiceProvider
     {
         $aliasLoader = AliasLoader::getInstance();
 
-        $aliasLoader->alias('Stylist', 'FloatingPoint\Stylist\Facades\StylistFacade');
-        $aliasLoader->alias('Theme', 'FloatingPoint\Stylist\Facades\ThemeFacade');
+        $aliasLoader->alias('Stylist', 'HamCore\Stylist\Facades\StylistFacade');
+        $aliasLoader->alias('Theme', 'HamCore\Stylist\Facades\ThemeFacade');
 
-        $this->app->alias('stylist', 'FloatingPoint\Stylist\Theme\Stylist');
+        $this->app->alias('stylist', 'HamCore\Stylist\Theme\Stylist');
     }
 
     /**
@@ -104,7 +104,7 @@ class StylistServiceProvider extends AggregateServiceProvider
     private function registerCommands()
     {
         $this->commands(
-            'FloatingPoint\Stylist\Console\PublishAssetsCommand'
+            'HamCore\Stylist\Console\PublishAssetsCommand'
         );
     }
 

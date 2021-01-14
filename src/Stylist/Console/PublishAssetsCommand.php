@@ -1,7 +1,7 @@
 <?php
-namespace FloatingPoint\Stylist\Console;
+namespace HamCore\Stylist\Console;
 
-use FloatingPoint\Stylist\Theme\Theme;
+use HamCore\Stylist\Theme\Theme;
 use Stylist;
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Container\Container;

@@ -1,8 +1,8 @@
 <?php
 namespace Tests\Theme;
 
-use floatingpoint\Stylist\Theme\Exceptions\ThemeJsonNotFoundException;
-use FloatingPoint\Stylist\Theme\Json;
+use HamCore\Stylist\Theme\Exceptions\ThemeJsonNotFoundException;
+use HamCore\Stylist\Theme\Json;
 
 class JsonTest extends \Tests\TestCase
 {
