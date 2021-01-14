@@ -1,4 +1,5 @@
 <?php
+
 namespace HamCore\Stylist\Html;
 
 use Collective\Html\HtmlBuilder;
@@ -18,7 +19,7 @@ class ThemeHtmlBuilder
     private $url;
 
     /**
-     * @param HtmlBuilder $html
+     * @param HtmlBuilder  $html
      * @param UrlGenerator $url
      */
     public function __construct(HtmlBuilder $html, UrlGenerator $url)
@@ -30,12 +31,13 @@ class ThemeHtmlBuilder
     /**
      * Generate a link to a JavaScript file.
      *
-     * @param  string  $url
-     * @param  array   $attributes
-     * @param  bool    $secure
+     * @param string $url
+     * @param array  $attributes
+     * @param bool   $secure
+     *
      * @return string
      */
-    public function script($url, $attributes = array(), $secure = null)
+    public function script($url, $attributes = [], $secure = null)
     {
         return $this->html->script($this->assetUrl($url), $attributes, $secure);
     }
@@ -44,12 +46,13 @@ class ThemeHtmlBuilder
      * Generate a link to a CSS file. With Stylist, this could actually generate
      * numerous style tags, due to CSS inheritance requirements.
      *
-     * @param  string  $url
-     * @param  array   $attributes
-     * @param  bool    $secure
+     * @param string $url
+     * @param array  $attributes
+     * @param bool   $secure
+     *
      * @return string
      */
-    public function style($url, $attributes = array(), $secure = null)
+    public function style($url, $attributes = [], $secure = null)
     {
         $styles = [];
         $theme = StylistFacade::current();
@@ -71,13 +74,14 @@ class ThemeHtmlBuilder
     /**
      * Generate an HTML image element.
      *
-     * @param  string  $url
-     * @param  string  $alt
-     * @param  array   $attributes
-     * @param  bool    $secure
+     * @param string $url
+     * @param string $alt
+     * @param array  $attributes
+     * @param bool   $secure
+     *
      * @return string
      */
-    public function image($url, $alt = null, $attributes = array(), $secure = null)
+    public function image($url, $alt = null, $attributes = [], $secure = null)
     {
         return $this->html->image($this->assetUrl($url), $alt, $attributes, $secure);
     }
@@ -87,6 +91,7 @@ class ThemeHtmlBuilder
      * for a full URL, simply add the site's URL configuration to this path.
      *
      * @param string $file
+     *
      * @return string
      */
     public function url($file = '')
@@ -97,13 +102,14 @@ class ThemeHtmlBuilder
     /**
      * Generate a HTML link to an asset.
      *
-     * @param  string  $url
-     * @param  string  $title
-     * @param  array   $attributes
-     * @param  bool    $secure
+     * @param string $url
+     * @param string $title
+     * @param array  $attributes
+     * @param bool   $secure
+     *
      * @return string
      */
-    public function linkAsset($url, $title = null, $attributes = array(), $secure = null)
+    public function linkAsset($url, $title = null, $attributes = [], $secure = null)
     {
         return $this->html->linkAsset($this->assetUrl($url), $title, $attributes, $secure);
     }
@@ -112,6 +118,7 @@ class ThemeHtmlBuilder
      * Do a few checks to get the theme path for a given asset url.
      *
      * @param string $url
+     *
      * @return string
      */
     protected function assetUrl($url)

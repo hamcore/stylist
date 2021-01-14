@@ -1,4 +1,5 @@
 <?php
+
 namespace Tests\Html;
 
 use HamCore\Stylist\Facades\StylistFacade;
@@ -11,7 +12,7 @@ class ThemeHtmlBuilderTest extends TestCase
 
     public function init()
     {
-        $this->builder = new ThemeHtmlBuilder($this->app['html'], $this->app['url']);;
+        $this->builder = new ThemeHtmlBuilder($this->app['html'], $this->app['url']);
 
         StylistFacade::registerPath(__DIR__.'/../Stubs/Themes/Parent');
         StylistFacade::activate('Parent theme');

@@ -1,17 +1,18 @@
 <?php
+
 namespace Tests;
 
 use Mockery as m;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {
-    public function tearDown() :void
+    public function tearDown(): void
     {
         parent::tearDown();
         m::close();
     }
 
-    public function setUp() :void
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -35,7 +36,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
     {
         return [
             'Stylist' => 'HamCore\Stylist\Facades\StylistFacade',
-            'Theme' => 'HamCore\Stylist\Facades\ThemeFacade',
+            'Theme'   => 'HamCore\Stylist\Facades\ThemeFacade',
         ];
     }
 

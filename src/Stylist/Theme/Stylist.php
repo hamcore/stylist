@@ -7,13 +7,11 @@ use HamCore\Stylist\Theme\Exceptions\ThemeNotFoundException;
 use Illuminate\Container\Container;
 
 /**
- * Class Stylist
+ * Class Stylist.
  *
  * Manages a repository of themes that are registered. Can be used to activate specific themes,
  * search for a given theme, register new ones or even search for themes within your application
  * directory.
- *
- * @package FloatingPoint\Stylist\Theme
  */
 class Stylist
 {
@@ -56,7 +54,7 @@ class Stylist
     private $view;
 
     /**
-     * @param Loader $themeLoader
+     * @param Loader    $themeLoader
      * @param Container $app
      */
     public function __construct(Loader $themeLoader, Container $app)
@@ -71,7 +69,7 @@ class Stylist
      * parameter allows the theme to be activated as soon as its registered.
      *
      * @param Theme $theme
-     * @param bool $activate
+     * @param bool  $activate
      */
     public function register(Theme $theme, $activate = false)
     {
@@ -88,7 +86,7 @@ class Stylist
      * Register a theme with Stylist based on its path.
      *
      * @param string $path
-     * @param boolean $activate
+     * @param bool   $activate
      */
     public function registerPath($path, $activate = false)
     {
@@ -114,6 +112,7 @@ class Stylist
      * Activate a theme. Activation can be done by the theme's name, or via a Theme object.
      *
      * @param string|Theme $theme
+     *
      * @throws ThemeNotFoundException
      */
     public function activate($theme)
@@ -155,6 +154,7 @@ class Stylist
      * Checks to see whether a theme by a given name has been registered.
      *
      * @param string $themeName
+     *
      * @return bool
      */
     public function has($themeName)
@@ -172,8 +172,10 @@ class Stylist
      * Retrieves a theme based on its name. If no theme is found it'll throw a ThemeNotFoundException.
      *
      * @param string $themeName
-     * @return Theme
+     *
      * @throws ThemeNotFoundException
+     *
+     * @return Theme
      */
     public function get($themeName)
     {
@@ -203,6 +205,7 @@ class Stylist
      * themes.
      *
      * @param $directory
+     *
      * @return array Returns an array of theme directory locations
      */
     public function discover($directory)
@@ -218,10 +221,12 @@ class Stylist
      * Will glob recursively for a files specified within the pattern.
      *
      * @param string $pattern
-     * @param int $flags
+     * @param int    $flags
+     *
      * @return array
      */
-    protected function rglob($pattern, $flags = 0) {
+    protected function rglob($pattern, $flags = 0)
+    {
         $files = glob($pattern, $flags);
 
         if ($files) {
@@ -230,7 +235,7 @@ class Stylist
 
         $files = [];
 
-        $possibleFiles = glob(dirname($pattern).'/*', GLOB_ONLYDIR|GLOB_NOSORT);
+        $possibleFiles = glob(dirname($pattern).'/*', GLOB_ONLYDIR | GLOB_NOSORT);
 
         if ($possibleFiles === false) {
             $possibleFiles = [];

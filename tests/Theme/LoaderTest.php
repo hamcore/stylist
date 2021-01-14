@@ -1,4 +1,5 @@
 <?php
+
 namespace Tests\Theme;
 
 use HamCore\Stylist\Theme\Loader;
@@ -7,7 +8,7 @@ class LoaderTest extends \Tests\TestCase
 {
     private $loader;
 
-	public function init()
+    public function init()
     {
         $this->loader = new Loader();
     }
@@ -22,7 +23,7 @@ class LoaderTest extends \Tests\TestCase
 
     public function testFromCache()
     {
-        $cachedTheme = new \stdClass;
+        $cachedTheme = new \stdClass();
         $cachedTheme->name = 'name';
         $cachedTheme->description = 'description';
         $cachedTheme->path = 'path';

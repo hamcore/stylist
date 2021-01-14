@@ -1,4 +1,5 @@
 <?php
+
 namespace Tests\Console;
 
 use Illuminate\Support\Facades\File;
