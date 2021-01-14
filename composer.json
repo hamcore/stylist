@@ -22,7 +22,7 @@
   },
   "autoload": {
     "psr-4": {
-      "FloatingPoint\\Stylist\\": "src/Stylist",
+      "HamCore\\Stylist\\": "src/Stylist",
       "Tests\\": "tests"
     }
   },
