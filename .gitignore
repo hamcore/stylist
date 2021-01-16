@@ -5,3 +5,5 @@ composer.lock
 .idea/*
 docs/
 /.phpunit.result.cache
+/public/index.html
+/public/logo.svg
